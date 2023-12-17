@@ -25,7 +25,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: '44620164-ae1d-40e8-9be0-a2024ac01d2a', passwordVariable: 'pass', usernameVariable: 'user')]) {
                         bat """docker build -t igotto1/student:1.0.0 .
                             docker login -u %user% --password %pass%
-                            docker push igotto1/student: 1.0.0"""
+                            docker push igotto1/student:1.0.0"""
                     }
                 }
             }
